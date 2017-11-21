@@ -11,13 +11,35 @@
 |
 */
 
+<<<<<<< HEAD
+/* facade */
+
+=======
+>>>>>>> 4027de2893bbe97aebd7dfa0c63894079e3623da
 Route::get('/', function () {
     return view('welcome');
 });
 
 
+<<<<<<< HEAD
+// Auth::routes();
+/*Route::group(['middleware' => 'auth', 'prefix' => 'backend'], function () {
+	
+}*/
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
+
+
+
+Route::resource("rooms", "RoomController");
+=======
 /*Route::get('/', 'HomeController@index')->name('home');*/
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> 4027de2893bbe97aebd7dfa0c63894079e3623da
